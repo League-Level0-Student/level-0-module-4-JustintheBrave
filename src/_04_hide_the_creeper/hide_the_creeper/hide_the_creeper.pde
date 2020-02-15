@@ -22,9 +22,11 @@ void draw() {
   }
   
   if(mousePressed) {
-  if(mouseX>=20 && mouseX<=100 && mouseY>=48 && mouseY<=116) {
+  if(mouseX>=creeperX && mouseX<=creeperX+80 && mouseY>=creeperY && mouseY<=creeperY+80) {
    fill(0,255,0); 
    ellipse(mouseX,mouseY,20,20);
+   creeperX=(int)random(0,800);
+   creeperY=(int)random(0,500);
   }
   }
 }
